@@ -1348,6 +1348,10 @@ include(linting_target)
 # specify install location with `-DCMAKE_INSTALL_PREFIX=xyz`
 # Enable shared library with `-DBUILD_SHARED_LIBS=ON`
 
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set(CMAKE_INSTALL_PREFIX "D:\\install_open62541\\" CACHE PATH "..." FORCE)
+endif()
+
 set(cmake_configfile_install ${CMAKE_INSTALL_LIBDIR}/cmake/open62541)
 set(open62541_install_tools_dir share/open62541/tools)
 set(open62541_install_nodeset_dir share/open62541/tools/ua-nodeset)
